@@ -10,6 +10,15 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    var StepperCountValueLabel=0
+    @IBAction func StepperCountValueLabel(_ sender: UIStepper) {
+        FirstLabel.text = String (StepperCountValueLabel + 2)
+        StepperCountValueLabel = StepperCountValueLabel + 2;
+    }
+    
+    @IBOutlet weak var WELCOME: UITextField!
+
+    
     var intCountValueLabel  = 0
     @IBAction func SubmitButton(_ sender: Any) {
         FirstLabel.text =  String(intCountValueLabel + 1);
@@ -19,7 +28,9 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        FirstLabel.text = "BUBU"
+        FirstLabel.text = "WELCOME"
+        
+        
         
         // Do any additional setup after loading the view.
     }
